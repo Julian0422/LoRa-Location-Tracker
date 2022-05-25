@@ -1,0 +1,3 @@
+After the transmitter sends the reply to the receiver, the receiver will, through Wi-Fi, send back the message to the server. I use Wi-Fi instead of LoRa to send back the message to the server because it can minimize the transmitting time, and I no need to buy one more LoRa receiver. Also, after the testing, it is a good choice for me to use Wi-Fi to send back the message to the server from the receiver.
+Same as the transmitter, first let’s include the SPI and RH_RF95 libraries in the sketch.
+Then, as the receiver is through Wi-Fi sends back the message to the server. Hence, it also includes the WiFiNINA and arduino_secrets for the Wi-Fi setting. Also, the messages are through UDP to send back to the server, hence which also includes the WiFiUdp.
