@@ -1,0 +1,1 @@
+Communicate with each receiver; the transmitter will work through LoRa to send the message to the receiver. I used Round Robin to take turns for each transmitter to prevent the collision of messages received by each receiver. Hence, there are a few differences in the program in each transmitter.
