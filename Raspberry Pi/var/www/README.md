@@ -1,3 +1,4 @@
+The user can through the local host to access the webpage. The users check all the patients, their contact person, and the LoRa information on the web page.
 
 ![image](https://user-images.githubusercontent.com/106225286/170227030-93377e7c-53bb-468e-bd71-b4804f226c1e.png)
 
