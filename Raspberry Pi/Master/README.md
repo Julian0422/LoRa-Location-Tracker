@@ -1,1 +1,1 @@
-
+You need to run this python program to startup the system. This python will print out all the received data and the status of the LoRa transmitters and receiver. Also, in the system, if the patient is missing, it will determine which direction the patient goes that the web page hasn't included.
