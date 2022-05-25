@@ -5,20 +5,24 @@ Hong Kong is facing an increasingly severe problem of an aging population. Moreo
 This project aims to develop a tracing system called LoRa Location Tracker for an elderly home or an apartment where elderly people stay alone. The system can also be applied to trace COVID-19 patients. The system locates users’ positions continuously and reports to the staff of the elderly home and hospitals, or their family members if they are not in their appropriate locations. Recently, LoRa (Long Range communication) has been introduced for localization. In this system, the users need to wear their LoRa transmitters for localization. Note that the size of a LoRa transmitter is small and it can be installed in a necklace. LoRa receivers are installed around a venue (e.g., an elderly home, an apartment, or a hospital) to receive the transmission signals. This system measures the RSSI (Received Signal Strength Indicator) values of the transmission signals to locate their positions and determines whether they stay inside or outside the venue. If they are outside the venue (i.e., they escape from the venue), this system can identify their moving directions. Note that this system can trace their positions in both indoor and outdoor environments, while GPS (Global Positioning System), one of the most popular localization systems, can be used properly in an outdoor environment only. It is important because most elderly homes, apartments, and some hospitals are indoor environments in Hong Kong.
 
 # LoRa
+
 LoRa (Long Range communication) is a wireless modulation utilized to create the long-range communication link, and LoRa is a low power consumption device compared with other wireless communication devices. In addition, LoRa is a license-free Megahertz radio frequency band, Europe in 169Mhz, 433MHz, 868MHz, and North America in 915MHz. Besides, Lora WAN can also fill the technical gaps in cellular, Wi-Fi, and Bluetooth Low Energy (BLE) networks. Which require high bandwidth, power, or have limited range, or cannot go deep indoor environments.
 
 #OBJECTIVE
+
 This project is to develop an IoT (Internet of Things) system called LoRa Location Tracker to trace people for elderly homes, apartments where elderly people stay alone, and hospitals. This system locates their positions and reports their locations to people that are taking care of them (e.g., staff of the elderly home or hospitals, their family members … etc.).
 
 In addition, the temperature measurement is a portable thermometer. The staff can measure the body temperature of the elderly anywhere and can also be placed at the exit of the nursing home.
 
 #Overview
+
 The block diagram of the LoRa location tracker system is shown in Fig. 1. This system is installed in a venue for a group of users. In this system, every user carries a necklace with a LoRa transmitter (there may be more than one user in a system). Some LoRa receivers are installed in the venue to receive the signals transmitted from different users (e.g., there are three receivers in Fig. 1). Note that the number of receivers should not be less than three because of the requirement of the Mathematical model of the LLS algorithm in. All receivers are connected to a web server. The server estimates the locations of different users by measuring the RSSI value of each signal and processing the measured data by the LLS algorithm. Based on the estimated locations, the server determines whether users stay inside or outside the venue and report to people that are taking care of them through a mobile app.
 
 ![image](https://user-images.githubusercontent.com/106225286/170229353-a724be0e-74bc-48d8-8f6c-e37769c5269d.png)
 Fig. 1.
 
 #LLS algorithm
+
 We can get the distance between a user (transmitter) i and a receiver j (i.e., dij) from the following equation:
 
 d_ij=10^(-(〖RSSI〗_ij-〖RSSI〗_0)/20α)	
